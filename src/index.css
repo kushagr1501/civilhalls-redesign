@@ -1,0 +1,74 @@
+@import "tailwindcss";
+
+@theme {
+  --color-civic-orange: #ff5c00;
+  --color-civic-blue: #4d4dff;
+  --color-deep-space: #020202;
+  --color-surface: #0a0a0a;
+  --color-border: rgba(255, 255, 255, 0.08);
+
+  --font-sans: "Outfit", ui-sans-serif, system-ui;
+  --font-serif: "Instrument Serif", serif;
+}
+
+@layer base {
+  body {
+    @apply bg-deep-space text-white/90 antialiased selection:bg-civic-orange/30;
+    font-feature-settings: "ss01", "ss02", "cv01", "cv02";
+  }
+}
+
+.glass {
+  @apply bg-white/5 backdrop-blur-xl border border-white/10;
+}
+
+.perspective-container {
+  perspective: 1000px;
+}
+
+.perspective-card {
+  transform-style: preserve-3d;
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-tr from-civic-orange via-white to-civic-blue;
+  }
+
+  .mask-radial {
+    mask-image: radial-gradient(circle, black, transparent 80%);
+  }
+}
+
+.architectural-grid {
+  background-image: radial-gradient(circle at 1px 1px, rgba(255, 255, 255, 0.03) 1px, transparent 0);
+  background-size: 32px 32px;
+}
+
+.bento-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.industrial-border {
+  @apply border border-white/5 relative;
+}
+
+.industrial-border::before {
+  content: '';
+  @apply absolute top-0 left-0 w-2 h-2 border-t border-l border-civic-orange opacity-0 transition-opacity duration-500;
+}
+
+.industrial-border:hover::before {
+  @apply opacity-100;
+}
