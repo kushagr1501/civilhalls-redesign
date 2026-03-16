@@ -11,15 +11,15 @@ const LENSES = [
 
 const LensBar = ({ activeLens, onLensChange }) => {
   return (
-    <div className="sticky top-20 z-40 bg-deep-space/80 backdrop-blur-md border-b border-white/5 py-4 px-8 mb-8">
-      <div className="max-w-7xl mx-auto flex items-center justify-between overflow-x-auto no-scrollbar gap-8">
-        <div className="flex gap-2">
+    <div className="sticky top-20 z-40 bg-deep-space/80 backdrop-blur-md border-b border-white/5 py-3 sm:py-4 px-4 sm:px-8 mb-8">
+      <div className="max-w-7xl mx-auto flex items-center justify-between overflow-x-auto no-scrollbar gap-4 sm:gap-8">
+        <div className="flex gap-1 sm:gap-2">
           {LENSES.map((lens) => (
             <button
               key={lens.id}
               onClick={() => onLensChange(lens.id)}
               className={`
-                relative px-6 py-2 transition-all duration-500 group rounded-xl hover:bg-white/[0.03]
+                relative px-3 sm:px-6 py-2 transition-all duration-500 group rounded-xl hover:bg-white/[0.03] shrink-0
                 ${activeLens === lens.id ? 'text-white' : 'text-white/60 hover:text-white/90'}
               `}
             >

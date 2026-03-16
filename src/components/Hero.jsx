@@ -6,7 +6,7 @@ const Hero = () => {
     <section className="relative min-h-screen flex flex-col items-center justify-center pt-20 overflow-hidden architectural-grid">
       <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-b from-civic-orange/5 via-transparent to-transparent opacity-50" />
 
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120vw] h-[120vw] bg-[radial-gradient(circle_at_center,rgba(255,92,0,0.05)_0%,transparent_70%)] blur-[120px] -z-10" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-full h-[100vw] bg-[radial-gradient(circle_at_center,rgba(255,92,0,0.05)_0%,transparent_70%)] blur-[120px] -z-10" />
 
       <motion.div
         initial={{ opacity: 0, y: 40 }}
@@ -32,7 +32,7 @@ const Hero = () => {
             whileHover={{ scale: 1.05, boxShadow: "0 0 30px rgba(255,92,0,0.2)" }}
             whileTap={{ scale: 0.95 }}
             onClick={() => document.getElementById('feed')?.scrollIntoView({ behavior: 'smooth' })}
-            className="group relative px-10 py-5 rounded-full bg-white text-black font-bold text-lg overflow-hidden transition-all duration-500"
+            className="group relative px-8 py-4 sm:px-10 sm:py-5 rounded-full bg-white text-black font-bold text-base sm:text-lg overflow-hidden transition-all duration-500"
           >
             <span className="relative z-10 group-hover:text-white transition-colors duration-500">Explore Global Feed</span>
             <div className="absolute inset-0 bg-civic-orange translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-out" />

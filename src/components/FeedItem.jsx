@@ -13,7 +13,7 @@ const FeedItem = ({ item, index }) => {
     );
   }, []);
 
-  const spanClass = item.size === 'wide' ? 'md:col-span-2' : item.size === 'tall' ? 'md:row-span-2' : '';
+  const spanClass = item.size === 'wide' ? 'lg:col-span-2' : item.size === 'tall' ? 'lg:row-span-2' : '';
 
   return (
     <motion.div
@@ -42,7 +42,7 @@ const FeedItem = ({ item, index }) => {
         </div>
 
         <div className="p-6 flex-1 flex flex-col justify-center">
-          <p className={`${item.size === 'wide' ? 'text-2xl' : 'text-lg'} font-serif italic text-white leading-snug group-hover:text-white transition-colors`}>
+          <p className={`${item.size === 'wide' ? 'text-xl sm:text-2xl' : 'text-lg'} font-serif italic text-white leading-snug group-hover:text-white transition-colors`}>
             {item.content}
           </p>
         </div>

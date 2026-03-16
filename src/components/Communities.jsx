@@ -39,20 +39,20 @@ const Communities = () => {
   const prev = () => setIndex((index - 1 + COMMUNITY_DATA.length) % COMMUNITY_DATA.length);
 
   return (
-    <section className="py-32 px-6 relative overflow-hidden bg-deep-space">
+    <section className="py-20 sm:py-32 px-4 sm:px-6 relative overflow-hidden bg-deep-space">
       <div className="max-w-7xl mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-10 sm:mb-16 gap-6 sm:gap-8">
           <div className="max-w-2xl">
             <motion.h2
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
-              className="text-4xl md:text-6xl font-medium tracking-tight mb-6"
+              className="text-3xl sm:text-4xl md:text-6xl font-medium tracking-tight mb-4 sm:mb-6"
             >
               Communities that <br />
               <span className="text-gradient">evolve automatically</span>
             </motion.h2>
-            <p className="text-white/70 text-lg font-light leading-relaxed">
-              Civic communities don’t stay empty. They can import relevant discussions happening across the platform based on topics and location.
+            <p className="text-white/70 text-base sm:text-lg font-light leading-relaxed">
+              Civic communities don't stay empty. They can import relevant discussions happening across the platform based on topics and location.
             </p>
           </div>
 
@@ -62,7 +62,7 @@ const Communities = () => {
           </div>
         </div>
 
-        <div className="relative aspect-[21/9] min-h-[400px]">
+        <div className="relative min-h-[480px] sm:min-h-[400px]">
           <AnimatePresence mode="wait">
             <motion.div
               key={index}
@@ -70,25 +70,25 @@ const Communities = () => {
               animate={{ opacity: 1, scale: 1, y: 0 }}
               exit={{ opacity: 0, scale: 1.05, y: -20 }}
               transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-              className="absolute inset-0 rounded-[32px] border border-white/5 bg-surface p-8 md:p-12 overflow-hidden group shadow-2xl"
+              className="absolute inset-0 rounded-2xl sm:rounded-[32px] border border-white/5 bg-surface p-5 sm:p-8 md:p-12 overflow-hidden group shadow-2xl"
             >
-              <div className="flex flex-col md:flex-row justify-between h-full gap-12 relative z-10">
-                <div className="flex flex-col justify-between max-w-sm">
+              <div className="flex flex-col md:flex-row justify-between h-full gap-8 sm:gap-12 relative z-10">
+                <div className="flex flex-col justify-between gap-6 md:max-w-sm shrink-0">
                   <div>
-                    <h3 className="text-3xl font-medium mb-2">{COMMUNITY_DATA[index].name}</h3>
-                    <div className="flex gap-3">
+                    <h3 className="text-2xl sm:text-3xl font-medium mb-2">{COMMUNITY_DATA[index].name}</h3>
+                    <div className="flex flex-wrap gap-2 sm:gap-3">
                       <Tag label={`Lens: ${COMMUNITY_DATA[index].lens}`} />
                       <Tag label={`Scope: ${COMMUNITY_DATA[index].scope}`} />
                     </div>
                   </div>
 
-                  <button className="w-fit flex items-center gap-2 px-6 py-3 rounded-xl bg-white/5 border border-white/10 text-sm font-bold hover:bg-civic-orange hover:text-white transition-all group/btn">
+                  <button className="w-fit flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-xl bg-white/5 border border-white/10 text-sm font-bold hover:bg-civic-orange hover:text-white transition-all group/btn">
                     <span>Join Community</span>
                     <Plus size={16} className="group-hover/btn:rotate-90 transition-transform duration-500" />
                   </button>
                 </div>
 
-                <div className="flex-1 space-y-4">
+                <div className="flex-1 space-y-3 sm:space-y-4 overflow-y-auto">
                   <span className="text-[10px] uppercase font-bold tracking-[0.2em] text-white/40">Active Dynamics</span>
                   {COMMUNITY_DATA[index].posts.map((post, i) => (
                     <motion.div
@@ -96,11 +96,11 @@ const Communities = () => {
                       initial={{ opacity: 0, x: 20 }}
                       animate={{ opacity: 1, x: 0 }}
                       transition={{ delay: 0.3 + i * 0.1 }}
-                      className="p-6 rounded-2xl bg-white/[0.02] border border-white/5 group-hover:bg-white/[0.04] transition-colors"
+                      className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-white/[0.02] border border-white/5 group-hover:bg-white/[0.04] transition-colors"
                     >
-                      <div className="flex flex-col gap-2">
+                      <div className="flex flex-col gap-1.5 sm:gap-2">
                         <span className="font-bold text-sm text-white/80">{post.author}</span>
-                        <p className="text-lg opacity-80">{post.content}</p>
+                        <p className="text-base sm:text-lg opacity-80">{post.content}</p>
                         <span className="text-[10px] uppercase tracking-widest text-civic-orange/60 font-medium">{post.source}</span>
                       </div>
                     </motion.div>
@@ -111,8 +111,8 @@ const Communities = () => {
           </AnimatePresence>
         </div>
 
-        <div className="mt-16 text-center">
-          <button className="px-8 py-4 rounded-full bg-gradient-to-r from-civic-orange to-orange-600 text-white font-bold text-sm hover:scale-105 active:scale-95 transition-all shadow-[0_0_30px_rgba(255,92,0,0.3)]">
+        <div className="mt-12 sm:mt-16 text-center">
+          <button className="px-6 sm:px-8 py-3 sm:py-4 rounded-full bg-gradient-to-r from-civic-orange to-orange-600 text-white font-bold text-sm hover:scale-105 active:scale-95 transition-all shadow-[0_0_30px_rgba(255,92,0,0.3)]">
             Create your own community
           </button>
         </div>
@@ -130,7 +130,7 @@ const Tag = ({ label }) => (
 const NavBtn = ({ icon, onClick }) => (
   <button
     onClick={onClick}
-    className="w-12 h-12 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:border-white transition-all active:scale-90"
+    className="w-11 h-11 sm:w-12 sm:h-12 rounded-full border border-white/10 flex items-center justify-center text-white/40 hover:text-white hover:border-white transition-all active:scale-90"
   >
     {icon}
   </button>

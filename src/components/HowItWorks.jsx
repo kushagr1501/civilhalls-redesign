@@ -21,12 +21,12 @@ const HowItWorks = () => {
   ];
 
   return (
-    <section className="py-32 px-6 relative overflow-hidden bg-deep-space">
+    <section className="py-20 sm:py-32 px-4 sm:px-6 relative overflow-hidden bg-deep-space">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-4xl md:text-6xl font-medium tracking-tight mb-20 text-center">How Civic <span className="text-gradient">works</span></h2>
+        <h2 className="text-3xl sm:text-4xl md:text-6xl font-medium tracking-tight mb-12 sm:mb-20 text-center">How Civic <span className="text-gradient">works</span></h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-16 relative">
-          <div className="absolute top-10 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent hidden md:block" />
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-10 sm:gap-16 relative">
+          <div className="absolute top-10 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent hidden sm:block" />
 
           {steps.map((step, idx) => (
             <motion.div
@@ -48,11 +48,11 @@ const HowItWorks = () => {
           ))}
         </div>
 
-        <div className="mt-40 max-w-5xl mx-auto">
-          <div className="p-1 rounded-[40px] bg-gradient-to-tr from-civic-orange/20 via-white/5 to-civic-blue/20">
-            <div className="bg-surface rounded-[38px] p-8 md:p-16 text-center">
-              <h3 className="text-3xl md:text-5xl font-medium mb-8 italic text-gradient leading-tight">"Civic gradually becomes a place where you explore ideas instead of scrolling endlessly."</h3>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-left mt-16">
+        <div className="mt-20 sm:mt-40 max-w-5xl mx-auto">
+          <div className="p-1 rounded-3xl sm:rounded-[40px] bg-gradient-to-tr from-civic-orange/20 via-white/5 to-civic-blue/20">
+            <div className="bg-surface rounded-[28px] sm:rounded-[38px] p-5 sm:p-8 md:p-16 text-center">
+              <h3 className="text-xl sm:text-3xl md:text-5xl font-medium mb-6 sm:mb-8 italic text-gradient leading-tight">"Civic gradually becomes a place where you explore ideas instead of scrolling endlessly."</h3>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 text-left mt-10 sm:mt-16">
                 <Benefit title="Discover new perspectives" desc="Switching lenses reveals discussions you would never encounter in a traditional feed." />
                 <Benefit title="Conversations feel grounded" desc="You start noticing how discussions differ between global, national, and local contexts." />
                 <Benefit title="Communities stay alive" desc="Instead of empty forums, communities continuously evolve as discussions flow in from across Civic." />

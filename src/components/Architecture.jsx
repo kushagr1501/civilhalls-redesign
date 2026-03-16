@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const Architecture = () => {
   return (
-    <section className="py-32 px-6 bg-surface/30 relative overflow-hidden">
+    <section className="py-20 sm:py-32 px-4 sm:px-6 bg-surface/30 relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-[1px] bg-gradient-to-r from-transparent via-white/10 to-transparent" />
 
       <div className="max-w-5xl mx-auto text-center">
@@ -11,27 +11,27 @@ const Architecture = () => {
           initial={{ opacity: 0, scale: 0.9 }}
           whileInView={{ opacity: 1, scale: 1 }}
           viewport={{ once: true }}
-          className="text-4xl md:text-6xl font-medium tracking-tight mb-8"
+          className="text-3xl sm:text-4xl md:text-6xl font-medium tracking-tight mb-6 sm:mb-8"
         >
           Civic conversation <span className="text-gradient">architecture</span>
         </motion.h2>
-        <p className="text-white/70 max-w-2xl mx-auto text-lg mb-20 leading-relaxed font-light">
+        <p className="text-white/70 max-w-2xl mx-auto text-base sm:text-lg mb-12 sm:mb-20 leading-relaxed font-light">
           A single discussion on Civic can appear across many contexts. Feed profiles combine topics and locations, while communities can import discussions from across the network.
         </p>
 
         <div className="relative flex flex-col items-center">
           <motion.div
             whileHover={{ scale: 1.02 }}
-            className="w-full max-w-2xl p-6 rounded-2xl border-2 border-civic-orange/50 bg-civic-orange/5 backdrop-blur-md relative z-20 shadow-[0_0_50px_rgba(255,92,0,0.1)]"
+            className="w-full max-w-2xl p-4 sm:p-6 rounded-2xl border-2 border-civic-orange/50 bg-civic-orange/5 backdrop-blur-md relative z-20 shadow-[0_0_50px_rgba(255,92,0,0.1)]"
           >
             <span className="text-sm font-bold uppercase tracking-[0.3em] text-civic-orange">Single Post</span>
-            <p className="text-xl mt-2 font-medium opacity-80 italic">"Does technology expand human wisdom or distract from it?"</p>
+            <p className="text-base sm:text-xl mt-2 font-medium opacity-80 italic">"Does technology expand human wisdom or distract from it?"</p>
           </motion.div>
 
           <div className="h-20 w-[1px] bg-gradient-to-b from-civic-orange to-white/10 relative z-10" />
           <div className="w-full max-w-4xl h-[1px] bg-white/10 relative z-10" />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 w-full max-w-4xl mt-0">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 sm:gap-8 w-full max-w-4xl mt-0">
             <ArchColumn
               title="Lenses"
               items={['Philosophy', 'Technology', 'Society']}

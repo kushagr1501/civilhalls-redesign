@@ -55,7 +55,7 @@ const Navbar = () => {
       >
         <div 
           className={`
-            pointer-events-auto flex items-center justify-between w-full max-w-7xl px-6 py-3 rounded-full 
+            pointer-events-auto flex items-center justify-between w-full max-w-7xl px-3 sm:px-6 py-2.5 sm:py-3 rounded-full 
             border transition-all duration-700
             ${scrolled 
               ? 'bg-deep-space/60 backdrop-blur-2xl border-white/10 shadow-[0_8px_32px_rgba(0,0,0,0.5)]' 
@@ -117,7 +117,7 @@ const Navbar = () => {
               <LogIn size={20} className="group-hover:translate-x-1 transition-transform" />
               <span>Login</span>
             </button>
-            <button className="px-6 py-2.5 rounded-full bg-white text-black text-base font-bold hover:bg-civic-orange hover:text-white hover:shadow-[0_0_30px_rgba(255,92,0,0.4)] transition-all duration-500 active:scale-95">
+            <button className="px-4 sm:px-6 py-2 sm:py-2.5 rounded-full bg-white text-black text-sm sm:text-base font-bold hover:bg-civic-orange hover:text-white hover:shadow-[0_0_30px_rgba(255,92,0,0.4)] transition-all duration-500 active:scale-95">
               Join
             </button>
             

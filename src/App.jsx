@@ -22,7 +22,7 @@ function App() {
           <Hero />
         </div>
 
-        <section id="feed" className="relative z-10 py-24 architectural-grid">
+        <section id="feed" className="relative z-10 py-12 sm:py-24 architectural-grid">
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             whileInView={{ opacity: 1, scale: 1 }}
@@ -30,7 +30,7 @@ function App() {
             className="text-center mb-4 flex flex-col items-center gap-4"
           >
             <div className="w-12 h-[1px] bg-gradient-to-r from-transparent via-civic-orange to-transparent" />
-            <h2 className="text-4xl md:text-6xl font-medium tracking-tight px-4 font-serif italic">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-medium tracking-tight px-4 font-serif italic">
               The Live <span className="text-gradient not-italic font-sans font-bold">Field</span>
             </h2>
             <p className="text-[10px] uppercase font-bold tracking-[0.5em] text-white/20">A multi-perspective resonance chamber</p>
